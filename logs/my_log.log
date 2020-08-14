@@ -1,0 +1,2758 @@
+[2020-08-13 13:59:51,635 INFO] Device ID 0
+[2020-08-13 13:59:51,635 INFO] Device cuda
+[2020-08-13 14:00:01,546 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /sdc/xli/py/bert/models/bert_uncased/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517
+[2020-08-13 14:00:01,547 INFO] Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2020-08-13 14:00:02,048 INFO] loading weights file https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin from cache at /sdc/xli/py/bert/models/bert_uncased/f2ee78bdd635b758cc0a12352586868bef80e47401abe4c4fcc3832421e7338b.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157
+[2020-08-13 14:00:05,030 INFO] All model checkpoint weights were used when initializing BertModel.
+
+[2020-08-13 14:00:05,030 INFO] All the weights of BertModel were initialized from the model checkpoint at bert-base-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BertModel for predictions without further training.
+[2020-08-13 14:00:09,271 INFO] NextSentencePrediction(
+  (bert): Bert(
+    (model): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (1): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (2): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (3): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (4): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (5): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (6): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (7): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (8): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (9): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (10): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (11): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+  )
+  (cls): BertOnlyNSPHead(
+    (seq_relationship): Linear(in_features=768, out_features=2, bias=True)
+  )
+)
+[2020-08-13 14:00:09,302 INFO] * number of parameters: 109483778
+[2020-08-13 14:00:09,302 INFO] Start training...
+[2020-08-13 14:00:10,131 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_139.pt, number of examples: 9990
+[2020-08-13 14:01:09,733 INFO] Device ID 0
+[2020-08-13 14:01:09,733 INFO] Device cuda
+[2020-08-13 14:01:10,879 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /sdc/xli/py/bert/models/bert_uncased/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517
+[2020-08-13 14:01:10,879 INFO] Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2020-08-13 14:01:11,360 INFO] loading weights file https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin from cache at /sdc/xli/py/bert/models/bert_uncased/f2ee78bdd635b758cc0a12352586868bef80e47401abe4c4fcc3832421e7338b.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157
+[2020-08-13 14:01:14,608 INFO] All model checkpoint weights were used when initializing BertModel.
+
+[2020-08-13 14:01:14,609 INFO] All the weights of BertModel were initialized from the model checkpoint at bert-base-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BertModel for predictions without further training.
+[2020-08-13 14:01:19,127 INFO] NextSentencePrediction(
+  (bert): Bert(
+    (model): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (1): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (2): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (3): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (4): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (5): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (6): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (7): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (8): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (9): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (10): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (11): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+  )
+  (cls): BertOnlyNSPHead(
+    (seq_relationship): Linear(in_features=768, out_features=2, bias=True)
+  )
+)
+[2020-08-13 14:01:19,135 INFO] * number of parameters: 109483778
+[2020-08-13 14:01:19,135 INFO] Start training...
+[2020-08-13 14:01:20,071 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_139.pt, number of examples: 9990
+[2020-08-13 14:01:42,801 INFO] Device ID 0
+[2020-08-13 14:01:42,801 INFO] Device cuda
+[2020-08-13 14:01:44,481 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /sdc/xli/py/bert/models/bert_uncased/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517
+[2020-08-13 14:01:44,481 INFO] Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2020-08-13 14:01:44,987 INFO] loading weights file https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin from cache at /sdc/xli/py/bert/models/bert_uncased/f2ee78bdd635b758cc0a12352586868bef80e47401abe4c4fcc3832421e7338b.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157
+[2020-08-13 14:01:48,212 INFO] All model checkpoint weights were used when initializing BertModel.
+
+[2020-08-13 14:01:48,212 INFO] All the weights of BertModel were initialized from the model checkpoint at bert-base-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BertModel for predictions without further training.
+[2020-08-13 14:01:52,802 INFO] NextSentencePrediction(
+  (bert): Bert(
+    (model): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (1): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (2): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (3): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (4): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (5): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (6): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (7): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (8): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (9): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (10): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (11): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+  )
+  (cls): BertOnlyNSPHead(
+    (seq_relationship): Linear(in_features=768, out_features=2, bias=True)
+  )
+)
+[2020-08-13 14:01:52,810 INFO] * number of parameters: 109483778
+[2020-08-13 14:01:52,810 INFO] Start training...
+[2020-08-13 14:01:53,756 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_139.pt, number of examples: 9990
+[2020-08-13 14:04:45,989 INFO] Step 100/100000; xent: 0.6782; lr: 0.0000020;   1 docs/s;    172 sec
+[2020-08-13 14:05:54,704 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_259.pt, number of examples: 9992
+[2020-08-13 14:06:47,414 INFO] Step 200/100000; xent: 0.6113; lr: 0.0000040;   2 docs/s;    294 sec
+[2020-08-13 14:08:47,742 INFO] Step 300/100000; xent: 0.6040; lr: 0.0000060;   2 docs/s;    414 sec
+[2020-08-13 14:09:04,120 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_270.pt, number of examples: 9989
+[2020-08-13 14:10:48,961 INFO] Step 400/100000; xent: 0.5782; lr: 0.0000080;   2 docs/s;    535 sec
+[2020-08-13 14:12:13,810 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_90.pt, number of examples: 9989
+[2020-08-13 14:12:50,855 INFO] Step 500/100000; xent: 0.5592; lr: 0.0000100;   2 docs/s;    657 sec
+[2020-08-13 14:12:50,858 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_500.pt
+[2020-08-13 14:14:53,087 INFO] Step 600/100000; xent: 0.5495; lr: 0.0000120;   2 docs/s;    779 sec
+[2020-08-13 14:15:25,177 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_174.pt, number of examples: 9988
+[2020-08-13 14:16:54,561 INFO] Step 700/100000; xent: 0.5424; lr: 0.0000140;   2 docs/s;    901 sec
+[2020-08-13 14:18:34,852 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_36.pt, number of examples: 9989
+[2020-08-13 14:18:56,156 INFO] Step 800/100000; xent: 0.5338; lr: 0.0000160;   2 docs/s;   1022 sec
+[2020-08-13 14:20:56,743 INFO] Step 900/100000; xent: 0.5146; lr: 0.0000180;   2 docs/s;   1143 sec
+[2020-08-13 14:21:44,627 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_204.pt, number of examples: 9986
+[2020-08-13 14:22:58,311 INFO] Step 1000/100000; xent: 0.5187; lr: 0.0000200;   2 docs/s;   1265 sec
+[2020-08-13 14:22:58,314 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_1000.pt
+[2020-08-13 14:24:56,296 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_337.pt, number of examples: 9986
+[2020-08-13 14:25:01,916 INFO] Step 1100/100000; xent: 0.5054; lr: 0.0000220;   2 docs/s;   1388 sec
+[2020-08-13 14:27:00,769 INFO] Step 1200/100000; xent: 0.5116; lr: 0.0000240;   2 docs/s;   1507 sec
+[2020-08-13 14:27:59,550 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_307.pt, number of examples: 9991
+[2020-08-13 14:28:53,242 INFO] Step 1300/100000; xent: 0.5094; lr: 0.0000260;   2 docs/s;   1619 sec
+[2020-08-13 14:30:45,051 INFO] Step 1400/100000; xent: 0.5011; lr: 0.0000280;   2 docs/s;   1731 sec
+[2020-08-13 14:30:55,188 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_208.pt, number of examples: 9988
+[2020-08-13 14:33:30,786 INFO] Step 1500/100000; xent: 0.4983; lr: 0.0000300;   1 docs/s;   1897 sec
+[2020-08-13 14:33:30,795 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_1500.pt
+[2020-08-13 14:35:44,832 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_235.pt, number of examples: 9993
+[2020-08-13 14:36:56,643 INFO] Step 1600/100000; xent: 0.5030; lr: 0.0000320;   1 docs/s;   2103 sec
+[2020-08-13 14:40:21,051 INFO] Step 1700/100000; xent: 0.4860; lr: 0.0000340;   1 docs/s;   2307 sec
+[2020-08-13 14:41:05,400 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_124.pt, number of examples: 9983
+[2020-08-13 14:43:47,025 INFO] Step 1800/100000; xent: 0.5041; lr: 0.0000360;   1 docs/s;   2513 sec
+[2020-08-13 14:46:25,592 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_55.pt, number of examples: 9993
+[2020-08-13 14:47:12,516 INFO] Step 1900/100000; xent: 0.5002; lr: 0.0000380;   1 docs/s;   2719 sec
+[2020-08-13 14:50:38,111 INFO] Step 2000/100000; xent: 0.4943; lr: 0.0000400;   1 docs/s;   2924 sec
+[2020-08-13 14:50:38,114 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_2000.pt
+[2020-08-13 14:51:49,344 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_91.pt, number of examples: 9985
+[2020-08-13 14:54:04,817 INFO] Step 2100/100000; xent: 0.4852; lr: 0.0000420;   1 docs/s;   3131 sec
+[2020-08-13 14:57:10,522 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_283.pt, number of examples: 9986
+[2020-08-13 14:57:30,211 INFO] Step 2200/100000; xent: 0.4882; lr: 0.0000440;   1 docs/s;   3336 sec
+[2020-08-13 15:00:54,822 INFO] Step 2300/100000; xent: 0.4901; lr: 0.0000460;   1 docs/s;   3541 sec
+[2020-08-13 15:02:32,313 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_207.pt, number of examples: 9987
+[2020-08-13 15:04:21,816 INFO] Step 2400/100000; xent: 0.4954; lr: 0.0000480;   1 docs/s;   3748 sec
+[2020-08-13 15:07:47,629 INFO] Step 2500/100000; xent: 0.4888; lr: 0.0000500;   1 docs/s;   3954 sec
+[2020-08-13 15:07:47,635 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_2500.pt
+[2020-08-13 15:07:56,292 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_81.pt, number of examples: 9990
+[2020-08-13 15:11:14,700 INFO] Step 2600/100000; xent: 0.4816; lr: 0.0000520;   1 docs/s;   4161 sec
+[2020-08-13 15:13:18,521 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_61.pt, number of examples: 9984
+[2020-08-13 15:14:40,523 INFO] Step 2700/100000; xent: 0.4757; lr: 0.0000540;   1 docs/s;   4367 sec
+[2020-08-13 15:18:05,032 INFO] Step 2800/100000; xent: 0.4896; lr: 0.0000560;   1 docs/s;   4571 sec
+[2020-08-13 15:18:38,712 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_304.pt, number of examples: 9991
+[2020-08-13 15:21:30,161 INFO] Step 2900/100000; xent: 0.4886; lr: 0.0000580;   1 docs/s;   4776 sec
+[2020-08-13 15:23:58,089 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_14.pt, number of examples: 9988
+[2020-08-13 15:24:55,118 INFO] Step 3000/100000; xent: 0.4750; lr: 0.0000600;   1 docs/s;   4981 sec
+[2020-08-13 15:24:55,128 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_3000.pt
+[2020-08-13 15:28:22,245 INFO] Step 3100/100000; xent: 0.4859; lr: 0.0000620;   1 docs/s;   5188 sec
+[2020-08-13 15:29:22,470 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_37.pt, number of examples: 9991
+[2020-08-13 15:31:48,849 INFO] Step 3200/100000; xent: 0.4846; lr: 0.0000640;   1 docs/s;   5395 sec
+[2020-08-13 15:34:45,227 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_282.pt, number of examples: 9996
+[2020-08-13 15:35:15,538 INFO] Step 3300/100000; xent: 0.4865; lr: 0.0000660;   1 docs/s;   5602 sec
+[2020-08-13 15:38:41,140 INFO] Step 3400/100000; xent: 0.4717; lr: 0.0000680;   1 docs/s;   5807 sec
+[2020-08-13 15:40:07,932 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_166.pt, number of examples: 9988
+[2020-08-13 15:42:07,441 INFO] Step 3500/100000; xent: 0.4808; lr: 0.0000700;   1 docs/s;   6014 sec
+[2020-08-13 15:42:07,444 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_3500.pt
+[2020-08-13 15:45:30,944 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_4.pt, number of examples: 9988
+[2020-08-13 15:45:34,342 INFO] Step 3600/100000; xent: 0.4891; lr: 0.0000720;   1 docs/s;   6221 sec
+[2020-08-13 15:48:58,721 INFO] Step 3700/100000; xent: 0.4834; lr: 0.0000740;   1 docs/s;   6425 sec
+[2020-08-13 15:50:55,698 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_312.pt, number of examples: 9988
+[2020-08-13 15:52:35,679 INFO] Step 3800/100000; xent: 0.4888; lr: 0.0000760;   1 docs/s;   6642 sec
+[2020-08-13 15:56:09,545 INFO] Step 3900/100000; xent: 0.4919; lr: 0.0000780;   1 docs/s;   6856 sec
+[2020-08-13 15:56:51,451 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_214.pt, number of examples: 9987
+[2020-08-13 16:00:02,568 INFO] Step 4000/100000; xent: 0.4723; lr: 0.0000800;   1 docs/s;   7089 sec
+[2020-08-13 16:00:02,571 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_4000.pt
+[2020-08-13 16:02:35,612 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_206.pt, number of examples: 9985
+[2020-08-13 16:03:35,902 INFO] Step 4100/100000; xent: 0.5085; lr: 0.0000820;   1 docs/s;   7302 sec
+[2020-08-13 16:05:44,288 INFO] Step 4200/100000; xent: 0.4885; lr: 0.0000840;   2 docs/s;   7431 sec
+[2020-08-13 16:06:29,166 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_338.pt, number of examples: 9990
+[2020-08-13 16:08:00,349 INFO] Step 4300/100000; xent: 0.4862; lr: 0.0000860;   2 docs/s;   7567 sec
+[2020-08-13 16:09:46,725 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_87.pt, number of examples: 9988
+[2020-08-13 16:10:19,413 INFO] Step 4400/100000; xent: 0.4944; lr: 0.0000880;   1 docs/s;   7706 sec
+[2020-08-13 16:12:30,615 INFO] Step 4500/100000; xent: 0.4959; lr: 0.0000900;   2 docs/s;   7837 sec
+[2020-08-13 16:12:42,426 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_4500.pt
+[2020-08-13 16:13:41,339 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_23.pt, number of examples: 9992
+[2020-08-13 16:15:02,002 INFO] Step 4600/100000; xent: 0.4949; lr: 0.0000920;   1 docs/s;   7988 sec
+[2020-08-13 16:17:04,206 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_46.pt, number of examples: 9986
+[2020-08-13 16:17:11,241 INFO] Step 4700/100000; xent: 0.4948; lr: 0.0000940;   2 docs/s;   8117 sec
+[2020-08-13 16:19:08,902 INFO] Step 4800/100000; xent: 0.5025; lr: 0.0000960;   2 docs/s;   8235 sec
+[2020-08-13 16:20:06,248 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_268.pt, number of examples: 9988
+[2020-08-13 16:21:01,999 INFO] Step 4900/100000; xent: 0.5156; lr: 0.0000980;   2 docs/s;   8348 sec
+[2020-08-13 16:22:54,132 INFO] Step 5000/100000; xent: 0.5016; lr: 0.0001000;   2 docs/s;   8460 sec
+[2020-08-13 16:22:54,135 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_5000.pt
+[2020-08-13 16:23:04,152 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_71.pt, number of examples: 9994
+[2020-08-13 16:25:53,247 INFO] Step 5100/100000; xent: 0.4920; lr: 0.0001020;   1 docs/s;   8639 sec
+[2020-08-13 16:28:04,331 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_66.pt, number of examples: 9986
+[2020-08-13 16:29:19,649 INFO] Step 5200/100000; xent: 0.5056; lr: 0.0001040;   1 docs/s;   8846 sec
+[2020-08-13 16:32:45,856 INFO] Step 5300/100000; xent: 0.4845; lr: 0.0001060;   1 docs/s;   9052 sec
+[2020-08-13 16:33:27,438 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_163.pt, number of examples: 9992
+[2020-08-13 16:36:12,640 INFO] Step 5400/100000; xent: 0.4955; lr: 0.0001080;   1 docs/s;   9259 sec
+[2020-08-13 16:38:50,551 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_331.pt, number of examples: 9996
+[2020-08-13 16:39:39,231 INFO] Step 5500/100000; xent: 0.4950; lr: 0.0001100;   1 docs/s;   9465 sec
+[2020-08-13 16:39:39,234 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_5500.pt
+[2020-08-13 16:43:05,552 INFO] Step 5600/100000; xent: 0.5052; lr: 0.0001120;   1 docs/s;   9672 sec
+[2020-08-13 16:44:14,088 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_5.pt, number of examples: 9990
+[2020-08-13 16:46:31,627 INFO] Step 5700/100000; xent: 0.5103; lr: 0.0001140;   1 docs/s;   9878 sec
+[2020-08-13 16:49:35,773 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_329.pt, number of examples: 9979
+[2020-08-13 16:49:57,887 INFO] Step 5800/100000; xent: 0.5039; lr: 0.0001160;   1 docs/s;  10084 sec
+[2020-08-13 16:53:22,062 INFO] Step 5900/100000; xent: 0.5111; lr: 0.0001180;   1 docs/s;  10288 sec
+[2020-08-13 16:54:55,280 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_51.pt, number of examples: 9993
+[2020-08-13 16:56:47,973 INFO] Step 6000/100000; xent: 0.4981; lr: 0.0001200;   1 docs/s;  10494 sec
+[2020-08-13 16:56:47,977 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_6000.pt
+[2020-08-13 17:00:14,560 INFO] Step 6100/100000; xent: 0.4987; lr: 0.0001220;   1 docs/s;  10701 sec
+[2020-08-13 17:00:19,364 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_340.pt, number of examples: 9986
+[2020-08-13 17:03:39,914 INFO] Step 6200/100000; xent: 0.5011; lr: 0.0001240;   1 docs/s;  10906 sec
+[2020-08-13 17:05:39,695 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_110.pt, number of examples: 9988
+[2020-08-13 17:07:05,218 INFO] Step 6300/100000; xent: 0.5082; lr: 0.0001260;   1 docs/s;  11111 sec
+[2020-08-13 17:10:29,447 INFO] Step 6400/100000; xent: 0.5201; lr: 0.0001280;   1 docs/s;  11316 sec
+[2020-08-13 17:11:00,874 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_22.pt, number of examples: 9988
+[2020-08-13 17:13:54,241 INFO] Step 6500/100000; xent: 0.5328; lr: 0.0001300;   1 docs/s;  11520 sec
+[2020-08-13 17:13:54,245 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_6500.pt
+[2020-08-13 17:16:22,997 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_222.pt, number of examples: 9988
+[2020-08-13 17:17:21,906 INFO] Step 6600/100000; xent: 0.5230; lr: 0.0001320;   1 docs/s;  11728 sec
+[2020-08-13 17:20:46,759 INFO] Step 6700/100000; xent: 0.5267; lr: 0.0001340;   1 docs/s;  11933 sec
+[2020-08-13 17:21:44,288 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_104.pt, number of examples: 9979
+[2020-08-13 17:24:11,196 INFO] Step 6800/100000; xent: 0.5363; lr: 0.0001360;   1 docs/s;  12137 sec
+[2020-08-13 17:27:03,721 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_85.pt, number of examples: 9987
+[2020-08-13 17:27:36,441 INFO] Step 6900/100000; xent: 0.5566; lr: 0.0001380;   1 docs/s;  12343 sec
+[2020-08-13 17:31:00,772 INFO] Step 7000/100000; xent: 0.5301; lr: 0.0001400;   1 docs/s;  12547 sec
+[2020-08-13 17:31:00,775 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_7000.pt
+[2020-08-13 17:32:25,045 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_70.pt, number of examples: 9987
+[2020-08-13 17:34:26,937 INFO] Step 7100/100000; xent: 0.5402; lr: 0.0001420;   1 docs/s;  12753 sec
+[2020-08-13 17:37:46,163 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_188.pt, number of examples: 9985
+[2020-08-13 17:37:52,270 INFO] Step 7200/100000; xent: 0.5251; lr: 0.0001440;   1 docs/s;  12959 sec
+[2020-08-13 17:41:16,934 INFO] Step 7300/100000; xent: 0.5345; lr: 0.0001460;   1 docs/s;  13163 sec
+[2020-08-13 17:43:06,860 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_77.pt, number of examples: 9987
+[2020-08-13 17:44:41,953 INFO] Step 7400/100000; xent: 0.5896; lr: 0.0001480;   1 docs/s;  13368 sec
+[2020-08-13 17:48:06,742 INFO] Step 7500/100000; xent: 0.5645; lr: 0.0001500;   1 docs/s;  13573 sec
+[2020-08-13 17:48:06,745 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_7500.pt
+[2020-08-13 17:48:29,389 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_106.pt, number of examples: 9991
+[2020-08-13 17:51:32,929 INFO] Step 7600/100000; xent: 0.6050; lr: 0.0001520;   1 docs/s;  13779 sec
+[2020-08-13 17:53:49,901 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_72.pt, number of examples: 9994
+[2020-08-13 17:54:59,587 INFO] Step 7700/100000; xent: 0.6465; lr: 0.0001540;   1 docs/s;  13986 sec
+[2020-08-13 17:57:45,627 INFO] Step 7800/100000; xent: 0.6378; lr: 0.0001560;   1 docs/s;  14152 sec
+[2020-08-13 17:58:14,379 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_219.pt, number of examples: 9984
+[2020-08-13 17:59:48,000 INFO] Step 7900/100000; xent: 0.6464; lr: 0.0001580;   2 docs/s;  14274 sec
+[2020-08-13 18:01:25,556 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_128.pt, number of examples: 9988
+[2020-08-13 18:01:51,161 INFO] Step 8000/100000; xent: 0.6377; lr: 0.0001600;   2 docs/s;  14397 sec
+[2020-08-13 18:01:51,166 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_8000.pt
+[2020-08-13 18:03:54,188 INFO] Step 8100/100000; xent: 0.6478; lr: 0.0001620;   2 docs/s;  14520 sec
+[2020-08-13 18:04:38,054 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_0.pt, number of examples: 9983
+[2020-08-13 18:05:56,399 INFO] Step 8200/100000; xent: 0.6397; lr: 0.0001640;   2 docs/s;  14643 sec
+[2020-08-13 18:07:48,295 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_172.pt, number of examples: 9985
+[2020-08-13 18:07:59,244 INFO] Step 8300/100000; xent: 0.6482; lr: 0.0001660;   2 docs/s;  14765 sec
+[2020-08-13 18:10:00,500 INFO] Step 8400/100000; xent: 0.6488; lr: 0.0001680;   2 docs/s;  14887 sec
+[2020-08-13 18:10:59,502 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_315.pt, number of examples: 9980
+[2020-08-13 18:12:02,883 INFO] Step 8500/100000; xent: 0.6377; lr: 0.0001700;   2 docs/s;  15009 sec
+[2020-08-13 18:12:02,886 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_8500.pt
+[2020-08-13 18:14:06,028 INFO] Step 8600/100000; xent: 0.6425; lr: 0.0001720;   2 docs/s;  15132 sec
+[2020-08-13 18:14:12,086 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_311.pt, number of examples: 9988
+[2020-08-13 18:16:08,796 INFO] Step 8700/100000; xent: 0.6481; lr: 0.0001740;   2 docs/s;  15255 sec
+[2020-08-13 18:17:22,875 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_40.pt, number of examples: 9989
+[2020-08-13 18:18:10,929 INFO] Step 8800/100000; xent: 0.6375; lr: 0.0001760;   2 docs/s;  15377 sec
+[2020-08-13 18:20:09,208 INFO] Step 8900/100000; xent: 0.6465; lr: 0.0001780;   2 docs/s;  15495 sec
+[2020-08-13 18:20:29,105 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_83.pt, number of examples: 9993
+[2020-08-13 18:22:02,223 INFO] Step 9000/100000; xent: 0.6353; lr: 0.0001800;   2 docs/s;  15608 sec
+[2020-08-13 18:22:02,226 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_9000.pt
+[2020-08-13 18:23:26,604 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_310.pt, number of examples: 9993
+[2020-08-13 18:23:56,485 INFO] Step 9100/100000; xent: 0.6407; lr: 0.0001820;   2 docs/s;  15723 sec
+[2020-08-13 18:26:48,955 INFO] Step 9200/100000; xent: 0.6349; lr: 0.0001840;   1 docs/s;  15895 sec
+[2020-08-13 18:27:50,639 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_57.pt, number of examples: 9994
+[2020-08-13 18:30:14,505 INFO] Step 9300/100000; xent: 0.6427; lr: 0.0001860;   1 docs/s;  16101 sec
+[2020-08-13 18:33:11,742 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_274.pt, number of examples: 9990
+[2020-08-13 18:33:39,912 INFO] Step 9400/100000; xent: 0.6396; lr: 0.0001880;   1 docs/s;  16306 sec
+[2020-08-13 18:37:04,777 INFO] Step 9500/100000; xent: 0.6459; lr: 0.0001900;   1 docs/s;  16511 sec
+[2020-08-13 18:37:04,780 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_9500.pt
+[2020-08-13 18:38:35,330 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_34.pt, number of examples: 9984
+[2020-08-13 18:40:32,326 INFO] Step 9600/100000; xent: 0.6338; lr: 0.0001920;   1 docs/s;  16719 sec
+[2020-08-13 18:43:56,870 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_38.pt, number of examples: 9988
+[2020-08-13 18:43:58,959 INFO] Step 9700/100000; xent: 0.6432; lr: 0.0001940;   1 docs/s;  16925 sec
+[2020-08-13 18:47:24,038 INFO] Step 9800/100000; xent: 0.6396; lr: 0.0001960;   1 docs/s;  17130 sec
+[2020-08-13 18:49:18,236 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_314.pt, number of examples: 9991
+[2020-08-13 18:50:49,846 INFO] Step 9900/100000; xent: 0.6369; lr: 0.0001980;   1 docs/s;  17336 sec
+[2020-08-13 18:54:15,497 INFO] Step 10000/100000; xent: 0.6438; lr: 0.0002000;   1 docs/s;  17542 sec
+[2020-08-13 18:54:15,500 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_10000.pt
+[2020-08-13 18:54:42,737 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_35.pt, number of examples: 9981
+[2020-08-13 18:57:43,042 INFO] Step 10100/100000; xent: 0.6363; lr: 0.0001990;   1 docs/s;  17749 sec
+[2020-08-13 19:00:03,519 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_42.pt, number of examples: 9991
+[2020-08-13 19:01:09,020 INFO] Step 10200/100000; xent: 0.6507; lr: 0.0001980;   1 docs/s;  17955 sec
+[2020-08-13 19:04:34,130 INFO] Step 10300/100000; xent: 0.6356; lr: 0.0001971;   1 docs/s;  18160 sec
+[2020-08-13 19:05:24,517 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_212.pt, number of examples: 9992
+[2020-08-13 19:08:00,589 INFO] Step 10400/100000; xent: 0.6454; lr: 0.0001961;   1 docs/s;  18367 sec
+[2020-08-13 19:10:47,880 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_201.pt, number of examples: 9985
+[2020-08-13 19:11:27,022 INFO] Step 10500/100000; xent: 0.6380; lr: 0.0001952;   1 docs/s;  18573 sec
+[2020-08-13 19:11:27,028 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_10500.pt
+[2020-08-13 19:14:53,236 INFO] Step 10600/100000; xent: 0.6472; lr: 0.0001943;   1 docs/s;  18779 sec
+[2020-08-13 19:16:10,618 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_7.pt, number of examples: 9990
+[2020-08-13 19:18:19,696 INFO] Step 10700/100000; xent: 0.6517; lr: 0.0001933;   1 docs/s;  18986 sec
+[2020-08-13 19:21:32,961 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_321.pt, number of examples: 9991
+[2020-08-13 19:21:45,297 INFO] Step 10800/100000; xent: 0.6389; lr: 0.0001925;   1 docs/s;  19192 sec
+[2020-08-13 19:25:10,113 INFO] Step 10900/100000; xent: 0.6298; lr: 0.0001916;   1 docs/s;  19396 sec
+[2020-08-13 19:26:53,885 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_302.pt, number of examples: 9990
+[2020-08-13 19:28:35,841 INFO] Step 11000/100000; xent: 0.6418; lr: 0.0001907;   1 docs/s;  19602 sec
+[2020-08-13 19:28:35,844 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_11000.pt
+[2020-08-13 19:32:02,360 INFO] Step 11100/100000; xent: 0.6370; lr: 0.0001898;   1 docs/s;  19809 sec
+[2020-08-13 19:32:17,889 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_276.pt, number of examples: 9989
+[2020-08-13 19:35:28,783 INFO] Step 11200/100000; xent: 0.6350; lr: 0.0001890;   1 docs/s;  20015 sec
+[2020-08-13 19:37:39,302 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_25.pt, number of examples: 9991
+[2020-08-13 19:38:54,895 INFO] Step 11300/100000; xent: 0.6414; lr: 0.0001881;   1 docs/s;  20221 sec
+[2020-08-13 19:42:20,319 INFO] Step 11400/100000; xent: 0.6437; lr: 0.0001873;   1 docs/s;  20427 sec
+[2020-08-13 19:43:02,230 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_294.pt, number of examples: 9988
+[2020-08-13 19:45:46,779 INFO] Step 11500/100000; xent: 0.6359; lr: 0.0001865;   1 docs/s;  20633 sec
+[2020-08-13 19:45:46,782 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_11500.pt
+[2020-08-13 19:48:25,625 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_156.pt, number of examples: 9990
+[2020-08-13 19:49:14,168 INFO] Step 11600/100000; xent: 0.6362; lr: 0.0001857;   1 docs/s;  20840 sec
+[2020-08-13 19:52:39,986 INFO] Step 11700/100000; xent: 0.6360; lr: 0.0001849;   1 docs/s;  21046 sec
+[2020-08-13 19:53:48,410 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_265.pt, number of examples: 9990
+[2020-08-13 19:56:06,524 INFO] Step 11800/100000; xent: 0.6445; lr: 0.0001841;   1 docs/s;  21253 sec
+[2020-08-13 19:58:34,441 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_60.pt, number of examples: 9990
+[2020-08-13 19:58:47,355 INFO] Step 11900/100000; xent: 0.6379; lr: 0.0001833;   1 docs/s;  21414 sec
+[2020-08-13 20:00:48,286 INFO] Step 12000/100000; xent: 0.6335; lr: 0.0001826;   2 docs/s;  21535 sec
+[2020-08-13 20:00:48,290 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_12000.pt
+[2020-08-13 20:01:46,914 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_121.pt, number of examples: 9987
+[2020-08-13 20:02:52,355 INFO] Step 12100/100000; xent: 0.6411; lr: 0.0001818;   2 docs/s;  21659 sec
+[2020-08-13 20:04:53,258 INFO] Step 12200/100000; xent: 0.6427; lr: 0.0001811;   2 docs/s;  21780 sec
+[2020-08-13 20:04:56,896 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_58.pt, number of examples: 9984
+[2020-08-13 20:06:54,810 INFO] Step 12300/100000; xent: 0.6410; lr: 0.0001803;   2 docs/s;  21901 sec
+[2020-08-13 20:08:06,234 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_203.pt, number of examples: 9994
+[2020-08-13 20:08:57,120 INFO] Step 12400/100000; xent: 0.6407; lr: 0.0001796;   2 docs/s;  22023 sec
+[2020-08-13 20:10:58,013 INFO] Step 12500/100000; xent: 0.6365; lr: 0.0001789;   2 docs/s;  22144 sec
+[2020-08-13 20:10:58,017 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_12500.pt
+[2020-08-13 20:11:19,117 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_317.pt, number of examples: 9980
+[2020-08-13 20:13:01,920 INFO] Step 12600/100000; xent: 0.6427; lr: 0.0001782;   2 docs/s;  22268 sec
+[2020-08-13 20:14:29,069 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_119.pt, number of examples: 9990
+[2020-08-13 20:15:04,138 INFO] Step 12700/100000; xent: 0.6327; lr: 0.0001775;   2 docs/s;  22390 sec
+[2020-08-13 20:17:04,776 INFO] Step 12800/100000; xent: 0.6372; lr: 0.0001768;   2 docs/s;  22511 sec
+[2020-08-13 20:17:38,519 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_335.pt, number of examples: 9990
+[2020-08-13 20:19:06,429 INFO] Step 12900/100000; xent: 0.6373; lr: 0.0001761;   2 docs/s;  22633 sec
+[2020-08-13 20:20:44,597 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_65.pt, number of examples: 9989
+[2020-08-13 20:21:02,625 INFO] Step 13000/100000; xent: 0.6382; lr: 0.0001754;   2 docs/s;  22749 sec
+[2020-08-13 20:21:02,629 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_13000.pt
+[2020-08-13 20:23:00,312 INFO] Step 13100/100000; xent: 0.6439; lr: 0.0001747;   2 docs/s;  22867 sec
+[2020-08-13 20:23:46,366 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_231.pt, number of examples: 9991
+[2020-08-13 20:24:58,755 INFO] Step 13200/100000; xent: 0.6412; lr: 0.0001741;   2 docs/s;  22985 sec
+[2020-08-13 20:28:18,757 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_280.pt, number of examples: 9986
+[2020-08-13 20:28:24,950 INFO] Step 13300/100000; xent: 0.6387; lr: 0.0001734;   1 docs/s;  23191 sec
+[2020-08-13 20:31:50,854 INFO] Step 13400/100000; xent: 0.6422; lr: 0.0001728;   1 docs/s;  23397 sec
+[2020-08-13 20:33:41,248 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_30.pt, number of examples: 9987
+[2020-08-13 20:35:17,229 INFO] Step 13500/100000; xent: 0.6315; lr: 0.0001721;   1 docs/s;  23603 sec
+[2020-08-13 20:35:17,232 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_13500.pt
+[2020-08-13 20:38:44,308 INFO] Step 13600/100000; xent: 0.6379; lr: 0.0001715;   1 docs/s;  23811 sec
+[2020-08-13 20:39:05,231 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_263.pt, number of examples: 9990
+[2020-08-13 20:42:10,336 INFO] Step 13700/100000; xent: 0.6392; lr: 0.0001709;   1 docs/s;  24017 sec
+[2020-08-13 20:44:27,274 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_97.pt, number of examples: 9993
+[2020-08-13 20:45:36,517 INFO] Step 13800/100000; xent: 0.6424; lr: 0.0001703;   1 docs/s;  24223 sec
+[2020-08-13 20:49:02,015 INFO] Step 13900/100000; xent: 0.6381; lr: 0.0001696;   1 docs/s;  24428 sec
+[2020-08-13 20:49:49,619 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_164.pt, number of examples: 9987
+[2020-08-13 20:52:27,814 INFO] Step 14000/100000; xent: 0.6415; lr: 0.0001690;   1 docs/s;  24634 sec
+[2020-08-13 20:52:27,817 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_14000.pt
+[2020-08-13 20:55:12,734 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_1.pt, number of examples: 9988
+[2020-08-13 20:55:55,252 INFO] Step 14100/100000; xent: 0.6450; lr: 0.0001684;   1 docs/s;  24841 sec
+[2020-08-13 20:59:20,575 INFO] Step 14200/100000; xent: 0.6408; lr: 0.0001678;   1 docs/s;  25047 sec
+[2020-08-13 21:00:35,037 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_132.pt, number of examples: 9984
+[2020-08-13 21:02:46,536 INFO] Step 14300/100000; xent: 0.6382; lr: 0.0001672;   1 docs/s;  25253 sec
+[2020-08-13 21:05:57,129 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_41.pt, number of examples: 9993
+[2020-08-13 21:06:13,666 INFO] Step 14400/100000; xent: 0.6396; lr: 0.0001667;   1 docs/s;  25460 sec
+[2020-08-13 21:09:38,999 INFO] Step 14500/100000; xent: 0.6414; lr: 0.0001661;   1 docs/s;  25665 sec
+[2020-08-13 21:09:39,002 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_14500.pt
+[2020-08-13 21:11:20,103 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_180.pt, number of examples: 9991
+[2020-08-13 21:13:06,132 INFO] Step 14600/100000; xent: 0.6303; lr: 0.0001655;   1 docs/s;  25872 sec
+[2020-08-13 21:16:31,610 INFO] Step 14700/100000; xent: 0.6371; lr: 0.0001650;   1 docs/s;  26078 sec
+[2020-08-13 21:16:42,430 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_205.pt, number of examples: 9984
+[2020-08-13 21:19:57,628 INFO] Step 14800/100000; xent: 0.6358; lr: 0.0001644;   1 docs/s;  26284 sec
+[2020-08-13 21:22:04,208 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_158.pt, number of examples: 9991
+[2020-08-13 21:23:24,362 INFO] Step 14900/100000; xent: 0.6389; lr: 0.0001638;   1 docs/s;  26491 sec
+[2020-08-13 21:26:50,011 INFO] Step 15000/100000; xent: 0.6431; lr: 0.0001633;   1 docs/s;  26696 sec
+[2020-08-13 21:26:50,014 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_15000.pt
+[2020-08-13 21:27:27,463 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_244.pt, number of examples: 9992
+[2020-08-13 21:30:17,720 INFO] Step 15100/100000; xent: 0.6405; lr: 0.0001628;   1 docs/s;  26904 sec
+[2020-08-13 21:32:50,276 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_28.pt, number of examples: 9983
+[2020-08-13 21:33:43,712 INFO] Step 15200/100000; xent: 0.6431; lr: 0.0001622;   1 docs/s;  27110 sec
+[2020-08-13 21:37:09,226 INFO] Step 15300/100000; xent: 0.6361; lr: 0.0001617;   1 docs/s;  27315 sec
+[2020-08-13 21:38:12,200 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_248.pt, number of examples: 9982
+[2020-08-13 21:40:35,966 INFO] Step 15400/100000; xent: 0.6379; lr: 0.0001612;   1 docs/s;  27522 sec
+[2020-08-13 21:43:33,966 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_197.pt, number of examples: 9989
+[2020-08-13 21:44:02,680 INFO] Step 15500/100000; xent: 0.6423; lr: 0.0001606;   1 docs/s;  27729 sec
+[2020-08-13 21:44:02,683 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_15500.pt
+[2020-08-13 21:47:28,139 INFO] Step 15600/100000; xent: 0.6394; lr: 0.0001601;   1 docs/s;  27934 sec
+[2020-08-13 21:48:55,037 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_33.pt, number of examples: 9990
+[2020-08-13 21:50:53,220 INFO] Step 15700/100000; xent: 0.6461; lr: 0.0001596;   1 docs/s;  28139 sec
+[2020-08-13 21:54:16,917 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_74.pt, number of examples: 9981
+[2020-08-13 21:54:19,045 INFO] Step 15800/100000; xent: 0.6391; lr: 0.0001591;   1 docs/s;  28345 sec
+[2020-08-13 21:57:44,215 INFO] Step 15900/100000; xent: 0.6326; lr: 0.0001586;   1 docs/s;  28550 sec
+[2020-08-13 21:58:54,676 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_52.pt, number of examples: 9986
+[2020-08-13 21:59:48,945 INFO] Step 16000/100000; xent: 0.6388; lr: 0.0001581;   2 docs/s;  28675 sec
+[2020-08-13 21:59:48,947 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_16000.pt
+[2020-08-13 22:01:50,905 INFO] Step 16100/100000; xent: 0.6420; lr: 0.0001576;   2 docs/s;  28797 sec
+[2020-08-13 22:02:05,366 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_11.pt, number of examples: 9987
+[2020-08-13 22:03:52,412 INFO] Step 16200/100000; xent: 0.6356; lr: 0.0001571;   2 docs/s;  28919 sec
+[2020-08-13 22:05:15,250 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_39.pt, number of examples: 9988
+[2020-08-13 22:05:53,868 INFO] Step 16300/100000; xent: 0.6444; lr: 0.0001567;   2 docs/s;  29040 sec
+[2020-08-13 22:07:54,717 INFO] Step 16400/100000; xent: 0.6353; lr: 0.0001562;   2 docs/s;  29161 sec
+[2020-08-13 22:08:24,868 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_305.pt, number of examples: 9993
+[2020-08-13 22:09:56,266 INFO] Step 16500/100000; xent: 0.6420; lr: 0.0001557;   2 docs/s;  29283 sec
+[2020-08-13 22:09:56,268 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_16500.pt
+[2020-08-13 22:11:36,236 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_287.pt, number of examples: 9991
+[2020-08-13 22:11:59,301 INFO] Step 16600/100000; xent: 0.6403; lr: 0.0001552;   2 docs/s;  29406 sec
+[2020-08-13 22:14:00,239 INFO] Step 16700/100000; xent: 0.6335; lr: 0.0001548;   2 docs/s;  29526 sec
+[2020-08-13 22:14:46,221 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_262.pt, number of examples: 9988
+[2020-08-13 22:16:01,632 INFO] Step 16800/100000; xent: 0.6345; lr: 0.0001543;   2 docs/s;  29648 sec
+[2020-08-13 22:17:55,904 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_215.pt, number of examples: 9991
+[2020-08-13 22:18:03,197 INFO] Step 16900/100000; xent: 0.6376; lr: 0.0001538;   2 docs/s;  29769 sec
+[2020-08-13 22:20:03,420 INFO] Step 17000/100000; xent: 0.6382; lr: 0.0001534;   2 docs/s;  29890 sec
+[2020-08-13 22:20:03,423 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_17000.pt
+[2020-08-13 22:21:02,247 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_210.pt, number of examples: 9982
+[2020-08-13 22:21:57,804 INFO] Step 17100/100000; xent: 0.6375; lr: 0.0001529;   2 docs/s;  30004 sec
+[2020-08-13 22:23:49,463 INFO] Step 17200/100000; xent: 0.6406; lr: 0.0001525;   2 docs/s;  30116 sec
+[2020-08-13 22:23:57,318 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_198.pt, number of examples: 9992
+[2020-08-13 22:26:19,959 INFO] Step 17300/100000; xent: 0.6388; lr: 0.0001521;   1 docs/s;  30266 sec
+[2020-08-13 22:28:29,796 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_272.pt, number of examples: 9991
+[2020-08-13 22:29:45,959 INFO] Step 17400/100000; xent: 0.6407; lr: 0.0001516;   1 docs/s;  30472 sec
+[2020-08-13 22:33:11,599 INFO] Step 17500/100000; xent: 0.6388; lr: 0.0001512;   1 docs/s;  30678 sec
+[2020-08-13 22:33:11,602 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_17500.pt
+[2020-08-13 22:33:54,516 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_24.pt, number of examples: 9989
+[2020-08-13 22:36:40,258 INFO] Step 17600/100000; xent: 0.6281; lr: 0.0001508;   1 docs/s;  30887 sec
+[2020-08-13 22:39:16,727 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_202.pt, number of examples: 9988
+[2020-08-13 22:40:06,038 INFO] Step 17700/100000; xent: 0.6351; lr: 0.0001503;   1 docs/s;  31092 sec
+[2020-08-13 22:43:31,387 INFO] Step 17800/100000; xent: 0.6381; lr: 0.0001499;   1 docs/s;  31298 sec
+[2020-08-13 22:44:38,535 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_153.pt, number of examples: 9989
+[2020-08-13 22:46:57,541 INFO] Step 17900/100000; xent: 0.6389; lr: 0.0001495;   1 docs/s;  31504 sec
+[2020-08-13 22:50:00,904 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_19.pt, number of examples: 9988
+[2020-08-13 22:50:23,546 INFO] Step 18000/100000; xent: 0.6262; lr: 0.0001491;   1 docs/s;  31710 sec
+[2020-08-13 22:50:23,549 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_18000.pt
+[2020-08-13 22:53:50,142 INFO] Step 18100/100000; xent: 0.6439; lr: 0.0001487;   1 docs/s;  31916 sec
+[2020-08-13 22:55:23,670 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_107.pt, number of examples: 9987
+[2020-08-13 22:57:16,052 INFO] Step 18200/100000; xent: 0.6320; lr: 0.0001482;   1 docs/s;  32122 sec
+[2020-08-13 23:00:41,653 INFO] Step 18300/100000; xent: 0.6426; lr: 0.0001478;   1 docs/s;  32328 sec
+[2020-08-13 23:00:46,112 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_88.pt, number of examples: 9993
+[2020-08-13 23:04:07,877 INFO] Step 18400/100000; xent: 0.6387; lr: 0.0001474;   1 docs/s;  32534 sec
+[2020-08-13 23:06:08,127 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_289.pt, number of examples: 9989
+[2020-08-13 23:07:33,948 INFO] Step 18500/100000; xent: 0.6349; lr: 0.0001470;   1 docs/s;  32740 sec
+[2020-08-13 23:07:33,951 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_18500.pt
+[2020-08-13 23:11:15,209 INFO] Device ID 0
+[2020-08-13 23:11:15,210 INFO] Device cuda
+[2020-08-13 23:11:25,272 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /sdc/xli/py/bert/models/bert_uncased/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517
+[2020-08-13 23:11:25,273 INFO] Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2020-08-13 23:11:25,769 INFO] loading weights file https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin from cache at /sdc/xli/py/bert/models/bert_uncased/f2ee78bdd635b758cc0a12352586868bef80e47401abe4c4fcc3832421e7338b.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157
+[2020-08-13 23:11:29,186 INFO] All model checkpoint weights were used when initializing BertModel.
+
+[2020-08-13 23:11:29,186 INFO] All the weights of BertModel were initialized from the model checkpoint at bert-base-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BertModel for predictions without further training.
+[2020-08-13 23:11:34,143 INFO] NextSentencePrediction(
+  (bert): Bert(
+    (model): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (1): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (2): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (3): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (4): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (5): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (6): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (7): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (8): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (9): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (10): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (11): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+  )
+  (cls): BertOnlyNPSHead(
+    (seq_relationship): Linear(in_features=768, out_features=2, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+[2020-08-13 23:11:34,149 INFO] * number of parameters: 109483778
+[2020-08-13 23:11:34,149 INFO] Start training...
+[2020-08-13 23:11:35,010 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_139.pt, number of examples: 9990
+[2020-08-13 23:13:55,039 INFO] Device ID 0
+[2020-08-13 23:13:55,040 INFO] Device cuda
+[2020-08-13 23:13:56,264 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /sdc/xli/py/bert/models/bert_uncased/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517
+[2020-08-13 23:13:56,265 INFO] Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2020-08-13 23:13:56,777 INFO] loading weights file https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin from cache at /sdc/xli/py/bert/models/bert_uncased/f2ee78bdd635b758cc0a12352586868bef80e47401abe4c4fcc3832421e7338b.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157
+[2020-08-13 23:13:59,856 INFO] All model checkpoint weights were used when initializing BertModel.
+
+[2020-08-13 23:13:59,856 INFO] All the weights of BertModel were initialized from the model checkpoint at bert-base-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BertModel for predictions without further training.
+[2020-08-13 23:14:04,480 INFO] NextSentencePrediction(
+  (bert): Bert(
+    (model): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (1): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (2): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (3): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (4): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (5): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (6): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (7): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (8): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (9): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (10): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (11): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+  )
+  (cls): BertOnlyNPSHead(
+    (seq_relationship): Linear(in_features=768, out_features=2, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+[2020-08-13 23:14:04,488 INFO] * number of parameters: 109483778
+[2020-08-13 23:14:04,488 INFO] Start training...
+[2020-08-13 23:14:05,417 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_139.pt, number of examples: 9990
+[2020-08-13 23:19:21,116 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_259.pt, number of examples: 9992
+[2020-08-13 23:20:48,900 INFO] Step 100/100000; xent: 0.7262; lr: 0.0000002;   1 docs/s;    403 sec
+[2020-08-13 23:24:35,062 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_270.pt, number of examples: 9989
+[2020-08-13 23:27:31,614 INFO] Step 200/100000; xent: 0.6900; lr: 0.0000004;   1 docs/s;    806 sec
+[2020-08-13 23:29:49,762 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_90.pt, number of examples: 9989
+[2020-08-13 23:34:14,779 INFO] Step 300/100000; xent: 0.6405; lr: 0.0000006;   1 docs/s;   1209 sec
+[2020-08-13 23:35:07,546 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_174.pt, number of examples: 9988
+[2020-08-13 23:40:22,824 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_36.pt, number of examples: 9989
+[2020-08-13 23:40:58,303 INFO] Step 400/100000; xent: 0.6253; lr: 0.0000008;   1 docs/s;   1613 sec
+[2020-08-13 23:45:37,406 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_204.pt, number of examples: 9986
+[2020-08-13 23:47:41,681 INFO] Step 500/100000; xent: 0.6145; lr: 0.0000010;   1 docs/s;   2016 sec
+[2020-08-13 23:47:41,684 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_500.pt
+[2020-08-13 23:50:53,324 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_337.pt, number of examples: 9986
+[2020-08-13 23:54:26,256 INFO] Step 600/100000; xent: 0.6121; lr: 0.0000012;   1 docs/s;   2421 sec
+[2020-08-13 23:55:39,081 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_307.pt, number of examples: 9991
+[2020-08-13 23:58:34,810 INFO] Step 700/100000; xent: 0.6032; lr: 0.0000014;   2 docs/s;   2669 sec
+[2020-08-13 23:58:45,485 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_208.pt, number of examples: 9988
+[2020-08-14 00:01:51,329 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_235.pt, number of examples: 9993
+[2020-08-14 00:02:33,617 INFO] Step 800/100000; xent: 0.5934; lr: 0.0000016;   2 docs/s;   2908 sec
+[2020-08-14 00:04:57,227 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_124.pt, number of examples: 9983
+[2020-08-14 00:06:31,834 INFO] Step 900/100000; xent: 0.5950; lr: 0.0000018;   2 docs/s;   3146 sec
+[2020-08-14 00:08:03,116 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_55.pt, number of examples: 9993
+[2020-08-14 00:10:30,443 INFO] Step 1000/100000; xent: 0.5844; lr: 0.0000020;   2 docs/s;   3385 sec
+[2020-08-14 00:10:30,446 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_1000.pt
+[2020-08-14 00:11:12,781 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_91.pt, number of examples: 9985
+[2020-08-14 00:14:19,456 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_283.pt, number of examples: 9986
+[2020-08-14 00:14:30,812 INFO] Step 1100/100000; xent: 0.5754; lr: 0.0000022;   2 docs/s;   3625 sec
+[2020-08-14 00:17:25,374 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_207.pt, number of examples: 9987
+[2020-08-14 00:18:24,159 INFO] Step 1200/100000; xent: 0.5708; lr: 0.0000024;   2 docs/s;   3859 sec
+[2020-08-14 00:20:17,504 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_81.pt, number of examples: 9990
+[2020-08-14 00:22:04,821 INFO] Step 1300/100000; xent: 0.5676; lr: 0.0000026;   2 docs/s;   4079 sec
+[2020-08-14 00:23:49,574 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_61.pt, number of examples: 9984
+[2020-08-14 00:28:32,021 INFO] Step 1400/100000; xent: 0.5573; lr: 0.0000028;   1 docs/s;   4467 sec
+[2020-08-14 00:29:05,487 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_304.pt, number of examples: 9991
+[2020-08-14 00:34:21,302 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_14.pt, number of examples: 9988
+[2020-08-14 00:35:17,182 INFO] Step 1500/100000; xent: 0.5580; lr: 0.0000030;   1 docs/s;   4872 sec
+[2020-08-14 00:35:17,185 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_1500.pt
+[2020-08-14 00:39:37,828 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_37.pt, number of examples: 9991
+[2020-08-14 00:42:02,449 INFO] Step 1600/100000; xent: 0.5504; lr: 0.0000032;   1 docs/s;   5277 sec
+[2020-08-14 00:44:53,087 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_282.pt, number of examples: 9996
+[2020-08-14 00:48:46,518 INFO] Step 1700/100000; xent: 0.5366; lr: 0.0000034;   1 docs/s;   5681 sec
+[2020-08-14 00:50:11,981 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_166.pt, number of examples: 9988
+[2020-08-14 00:55:28,145 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_4.pt, number of examples: 9988
+[2020-08-14 00:55:31,457 INFO] Step 1800/100000; xent: 0.5375; lr: 0.0000036;   1 docs/s;   6086 sec
+[2020-08-14 01:00:43,467 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_312.pt, number of examples: 9988
+[2020-08-14 01:02:15,645 INFO] Step 1900/100000; xent: 0.5310; lr: 0.0000038;   1 docs/s;   6490 sec
+[2020-08-14 01:05:58,957 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_214.pt, number of examples: 9987
+[2020-08-14 01:08:59,853 INFO] Step 2000/100000; xent: 0.5350; lr: 0.0000040;   1 docs/s;   6894 sec
+[2020-08-14 01:08:59,857 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_2000.pt
+[2020-08-14 01:11:18,641 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_206.pt, number of examples: 9985
+[2020-08-14 01:15:44,867 INFO] Step 2100/100000; xent: 0.5249; lr: 0.0000042;   1 docs/s;   7299 sec
+[2020-08-14 01:16:34,709 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_338.pt, number of examples: 9990
+[2020-08-14 01:21:49,675 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_87.pt, number of examples: 9988
+[2020-08-14 01:22:29,441 INFO] Step 2200/100000; xent: 0.5218; lr: 0.0000044;   1 docs/s;   7704 sec
+[2020-08-14 01:27:05,161 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_23.pt, number of examples: 9992
+[2020-08-14 01:29:13,411 INFO] Step 2300/100000; xent: 0.5237; lr: 0.0000046;   1 docs/s;   8108 sec
+[2020-08-14 01:32:23,436 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_46.pt, number of examples: 9986
+[2020-08-14 01:35:57,046 INFO] Step 2400/100000; xent: 0.5114; lr: 0.0000048;   1 docs/s;   8512 sec
+[2020-08-14 01:37:39,172 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_268.pt, number of examples: 9988
+[2020-08-14 01:42:40,904 INFO] Step 2500/100000; xent: 0.5206; lr: 0.0000050;   1 docs/s;   8915 sec
+[2020-08-14 01:42:40,907 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_2500.pt
+[2020-08-14 01:42:55,471 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_71.pt, number of examples: 9994
+[2020-08-14 01:48:10,450 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_66.pt, number of examples: 9986
+[2020-08-14 01:49:26,379 INFO] Step 2600/100000; xent: 0.5143; lr: 0.0000052;   1 docs/s;   9321 sec
+[2020-08-14 01:53:28,819 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_163.pt, number of examples: 9992
+[2020-08-14 01:55:58,254 INFO] Step 2700/100000; xent: 0.5046; lr: 0.0000054;   1 docs/s;   9713 sec
+[2020-08-14 01:57:29,635 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_331.pt, number of examples: 9996
+[2020-08-14 01:59:56,410 INFO] Step 2800/100000; xent: 0.5080; lr: 0.0000056;   2 docs/s;   9951 sec
+[2020-08-14 02:00:35,643 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_5.pt, number of examples: 9990
+[2020-08-14 02:03:41,344 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_329.pt, number of examples: 9979
+[2020-08-14 02:03:55,170 INFO] Step 2900/100000; xent: 0.5069; lr: 0.0000058;   2 docs/s;  10190 sec
+[2020-08-14 02:06:47,186 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_51.pt, number of examples: 9993
+[2020-08-14 02:07:53,623 INFO] Step 3000/100000; xent: 0.5014; lr: 0.0000060;   2 docs/s;  10428 sec
+[2020-08-14 02:07:53,626 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_3000.pt
+[2020-08-14 02:09:56,564 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_340.pt, number of examples: 9986
+[2020-08-14 02:11:52,916 INFO] Step 3100/100000; xent: 0.4952; lr: 0.0000062;   2 docs/s;  10667 sec
+[2020-08-14 02:13:02,860 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_110.pt, number of examples: 9988
+[2020-08-14 02:15:49,479 INFO] Step 3200/100000; xent: 0.4994; lr: 0.0000064;   2 docs/s;  10904 sec
+[2020-08-14 02:16:07,318 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_22.pt, number of examples: 9988
+[2020-08-14 02:19:13,270 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_222.pt, number of examples: 9988
+[2020-08-14 02:19:48,441 INFO] Step 3300/100000; xent: 0.4991; lr: 0.0000066;   2 docs/s;  11143 sec
+[2020-08-14 02:22:17,347 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_104.pt, number of examples: 9979
+[2020-08-14 02:23:36,503 INFO] Step 3400/100000; xent: 0.4951; lr: 0.0000068;   2 docs/s;  11371 sec
+[2020-08-14 02:25:10,010 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_85.pt, number of examples: 9987
+[2020-08-14 02:27:54,758 INFO] Step 3500/100000; xent: 0.4832; lr: 0.0000070;   2 docs/s;  11629 sec
+[2020-08-14 02:27:54,762 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_3500.pt
+[2020-08-14 02:29:17,578 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_70.pt, number of examples: 9987
+[2020-08-14 02:34:32,702 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_188.pt, number of examples: 9985
+[2020-08-14 02:34:39,987 INFO] Step 3600/100000; xent: 0.4868; lr: 0.0000072;   1 docs/s;  12035 sec
+[2020-08-14 02:39:48,026 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_77.pt, number of examples: 9987
+[2020-08-14 02:41:23,794 INFO] Step 3700/100000; xent: 0.4940; lr: 0.0000074;   1 docs/s;  12438 sec
+[2020-08-14 02:45:06,225 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_106.pt, number of examples: 9991
+[2020-08-14 02:48:03,138 INFO] Step 3800/100000; xent: 0.4777; lr: 0.0000076;   1 docs/s;  12838 sec
+[2020-08-14 02:49:16,729 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_72.pt, number of examples: 9994
+[2020-08-14 02:51:43,517 INFO] Step 3900/100000; xent: 0.4797; lr: 0.0000078;   2 docs/s;  13058 sec
+[2020-08-14 02:52:08,833 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_219.pt, number of examples: 9984
+[2020-08-14 02:55:01,003 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_128.pt, number of examples: 9988
+[2020-08-14 02:55:25,170 INFO] Step 4000/100000; xent: 0.4837; lr: 0.0000080;   2 docs/s;  13280 sec
+[2020-08-14 02:55:25,174 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_4000.pt
+[2020-08-14 02:57:54,761 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_0.pt, number of examples: 9983
+[2020-08-14 02:59:06,849 INFO] Step 4100/100000; xent: 0.4820; lr: 0.0000082;   2 docs/s;  13501 sec
+[2020-08-14 03:00:46,943 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_172.pt, number of examples: 9985
+[2020-08-14 03:02:47,749 INFO] Step 4200/100000; xent: 0.4835; lr: 0.0000084;   2 docs/s;  13722 sec
+[2020-08-14 03:03:41,193 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_315.pt, number of examples: 9980
+[2020-08-14 03:06:28,205 INFO] Step 4300/100000; xent: 0.4778; lr: 0.0000086;   2 docs/s;  13943 sec
+[2020-08-14 03:06:33,752 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_311.pt, number of examples: 9988
+[2020-08-14 03:09:26,360 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_40.pt, number of examples: 9989
+[2020-08-14 03:10:09,866 INFO] Step 4400/100000; xent: 0.4809; lr: 0.0000088;   2 docs/s;  14164 sec
+[2020-08-14 03:12:18,580 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_83.pt, number of examples: 9993
+[2020-08-14 03:13:50,384 INFO] Step 4500/100000; xent: 0.4721; lr: 0.0000090;   2 docs/s;  14385 sec
+[2020-08-14 03:13:50,387 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_4500.pt
+[2020-08-14 03:15:11,857 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_310.pt, number of examples: 9993
+[2020-08-14 03:17:32,173 INFO] Step 4600/100000; xent: 0.4709; lr: 0.0000092;   2 docs/s;  14607 sec
+[2020-08-14 03:18:05,960 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_57.pt, number of examples: 9994
+[2020-08-14 03:20:58,629 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_274.pt, number of examples: 9990
+[2020-08-14 03:21:13,692 INFO] Step 4700/100000; xent: 0.4651; lr: 0.0000094;   2 docs/s;  14828 sec
+[2020-08-14 03:23:51,151 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_34.pt, number of examples: 9984
+[2020-08-14 03:24:54,506 INFO] Step 4800/100000; xent: 0.4797; lr: 0.0000096;   2 docs/s;  15049 sec
+[2020-08-14 03:26:43,333 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_38.pt, number of examples: 9988
+[2020-08-14 03:28:35,521 INFO] Step 4900/100000; xent: 0.4734; lr: 0.0000098;   2 docs/s;  15270 sec
+[2020-08-14 03:29:36,099 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_314.pt, number of examples: 9991
+[2020-08-14 03:32:16,071 INFO] Step 5000/100000; xent: 0.4772; lr: 0.0000100;   2 docs/s;  15491 sec
+[2020-08-14 03:32:16,074 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_5000.pt
+[2020-08-14 03:32:31,264 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_35.pt, number of examples: 9981
+[2020-08-14 03:35:23,887 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_42.pt, number of examples: 9991
+[2020-08-14 03:35:59,088 INFO] Step 5100/100000; xent: 0.4740; lr: 0.0000102;   2 docs/s;  15714 sec
+[2020-08-14 03:38:16,598 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_212.pt, number of examples: 9992
+[2020-08-14 03:39:39,688 INFO] Step 5200/100000; xent: 0.4674; lr: 0.0000104;   2 docs/s;  15934 sec
+[2020-08-14 03:41:08,843 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_201.pt, number of examples: 9985
+[2020-08-14 03:43:20,280 INFO] Step 5300/100000; xent: 0.4767; lr: 0.0000106;   2 docs/s;  16155 sec
+[2020-08-14 03:44:01,087 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_7.pt, number of examples: 9990
+[2020-08-14 03:46:54,935 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_321.pt, number of examples: 9991
+[2020-08-14 03:47:01,549 INFO] Step 5400/100000; xent: 0.4683; lr: 0.0000108;   2 docs/s;  16376 sec
+[2020-08-14 03:49:47,470 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_302.pt, number of examples: 9990
+[2020-08-14 03:50:42,010 INFO] Step 5500/100000; xent: 0.4644; lr: 0.0000110;   2 docs/s;  16597 sec
+[2020-08-14 03:50:42,013 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_5500.pt
+[2020-08-14 03:52:40,743 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_276.pt, number of examples: 9989
+[2020-08-14 03:54:23,563 INFO] Step 5600/100000; xent: 0.4666; lr: 0.0000112;   2 docs/s;  16818 sec
+[2020-08-14 03:55:32,662 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_25.pt, number of examples: 9991
+[2020-08-14 03:58:03,732 INFO] Step 5700/100000; xent: 0.4701; lr: 0.0000114;   2 docs/s;  17038 sec
+[2020-08-14 03:58:26,483 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_294.pt, number of examples: 9988
+[2020-08-14 04:01:18,848 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_156.pt, number of examples: 9990
+[2020-08-14 04:01:44,770 INFO] Step 5800/100000; xent: 0.4587; lr: 0.0000116;   2 docs/s;  17259 sec
+[2020-08-14 04:04:10,743 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_265.pt, number of examples: 9990
+[2020-08-14 04:05:24,897 INFO] Step 5900/100000; xent: 0.4609; lr: 0.0000118;   2 docs/s;  17479 sec
+[2020-08-14 04:07:02,547 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_60.pt, number of examples: 9990
+[2020-08-14 04:09:04,894 INFO] Step 6000/100000; xent: 0.4614; lr: 0.0000120;   2 docs/s;  17699 sec
+[2020-08-14 04:09:04,897 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_6000.pt
+[2020-08-14 04:09:57,240 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_121.pt, number of examples: 9987
+[2020-08-14 04:12:46,114 INFO] Step 6100/100000; xent: 0.4564; lr: 0.0000122;   2 docs/s;  17921 sec
+[2020-08-14 04:12:49,397 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_58.pt, number of examples: 9984
+[2020-08-14 04:15:41,127 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_203.pt, number of examples: 9994
+[2020-08-14 04:16:27,167 INFO] Step 6200/100000; xent: 0.4621; lr: 0.0000124;   2 docs/s;  18142 sec
+[2020-08-14 04:18:33,265 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_317.pt, number of examples: 9980
+[2020-08-14 04:20:07,296 INFO] Step 6300/100000; xent: 0.4638; lr: 0.0000126;   2 docs/s;  18362 sec
+[2020-08-14 04:21:25,126 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_119.pt, number of examples: 9990
+[2020-08-14 04:23:47,757 INFO] Step 6400/100000; xent: 0.4558; lr: 0.0000128;   2 docs/s;  18582 sec
+[2020-08-14 04:24:17,395 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_335.pt, number of examples: 9990
+[2020-08-14 04:27:10,923 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_65.pt, number of examples: 9989
+[2020-08-14 04:27:28,512 INFO] Step 6500/100000; xent: 0.4579; lr: 0.0000130;   2 docs/s;  18803 sec
+[2020-08-14 04:27:28,515 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_6500.pt
+[2020-08-14 04:30:04,391 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_231.pt, number of examples: 9991
+[2020-08-14 04:31:09,827 INFO] Step 6600/100000; xent: 0.4581; lr: 0.0000132;   2 docs/s;  19024 sec
+[2020-08-14 04:32:56,346 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_280.pt, number of examples: 9986
+[2020-08-14 04:34:50,158 INFO] Step 6700/100000; xent: 0.4607; lr: 0.0000134;   2 docs/s;  19245 sec
+[2020-08-14 04:35:48,336 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_30.pt, number of examples: 9987
+[2020-08-14 04:38:30,339 INFO] Step 6800/100000; xent: 0.4526; lr: 0.0000136;   2 docs/s;  19465 sec
+[2020-08-14 04:38:41,933 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_263.pt, number of examples: 9990
+[2020-08-14 04:41:34,206 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_97.pt, number of examples: 9993
+[2020-08-14 04:42:11,124 INFO] Step 6900/100000; xent: 0.4559; lr: 0.0000138;   2 docs/s;  19686 sec
+[2020-08-14 04:44:26,064 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_164.pt, number of examples: 9987
+[2020-08-14 04:45:51,287 INFO] Step 7000/100000; xent: 0.4567; lr: 0.0000140;   2 docs/s;  19906 sec
+[2020-08-14 04:45:51,290 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_7000.pt
+[2020-08-14 04:47:19,093 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_1.pt, number of examples: 9988
+[2020-08-14 04:49:32,530 INFO] Step 7100/100000; xent: 0.4583; lr: 0.0000142;   2 docs/s;  20127 sec
+[2020-08-14 04:50:12,667 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_132.pt, number of examples: 9984
+[2020-08-14 04:53:04,954 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_41.pt, number of examples: 9993
+[2020-08-14 04:53:13,761 INFO] Step 7200/100000; xent: 0.4567; lr: 0.0000144;   2 docs/s;  20348 sec
+[2020-08-14 04:55:57,259 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_180.pt, number of examples: 9991
+[2020-08-14 04:56:53,973 INFO] Step 7300/100000; xent: 0.4537; lr: 0.0000146;   2 docs/s;  20569 sec
+[2020-08-14 04:58:49,191 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_205.pt, number of examples: 9984
+[2020-08-14 05:00:34,088 INFO] Step 7400/100000; xent: 0.4496; lr: 0.0000148;   2 docs/s;  20789 sec
+[2020-08-14 05:01:41,027 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_158.pt, number of examples: 9991
+[2020-08-14 05:04:14,652 INFO] Step 7500/100000; xent: 0.4533; lr: 0.0000150;   2 docs/s;  21009 sec
+[2020-08-14 05:04:14,655 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_7500.pt
+[2020-08-14 05:04:34,505 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_244.pt, number of examples: 9992
+[2020-08-14 05:07:28,139 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_28.pt, number of examples: 9983
+[2020-08-14 05:07:56,686 INFO] Step 7600/100000; xent: 0.4495; lr: 0.0000152;   2 docs/s;  21231 sec
+[2020-08-14 05:10:20,323 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_248.pt, number of examples: 9982
+[2020-08-14 05:11:37,187 INFO] Step 7700/100000; xent: 0.4571; lr: 0.0000154;   2 docs/s;  21452 sec
+[2020-08-14 05:13:12,609 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_197.pt, number of examples: 9989
+[2020-08-14 05:15:17,732 INFO] Step 7800/100000; xent: 0.4552; lr: 0.0000156;   2 docs/s;  21672 sec
+[2020-08-14 05:16:04,905 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_33.pt, number of examples: 9990
+[2020-08-14 05:18:56,789 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_74.pt, number of examples: 9981
+[2020-08-14 05:18:58,586 INFO] Step 7900/100000; xent: 0.4498; lr: 0.0000158;   2 docs/s;  21893 sec
+[2020-08-14 05:21:48,675 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_52.pt, number of examples: 9986
+[2020-08-14 05:22:39,044 INFO] Step 8000/100000; xent: 0.4430; lr: 0.0000160;   2 docs/s;  22114 sec
+[2020-08-14 05:22:39,047 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_8000.pt
+[2020-08-14 05:24:41,907 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_11.pt, number of examples: 9987
+[2020-08-14 05:26:20,135 INFO] Step 8100/100000; xent: 0.4438; lr: 0.0000162;   2 docs/s;  22335 sec
+[2020-08-14 05:27:35,267 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_39.pt, number of examples: 9988
+[2020-08-14 05:30:00,034 INFO] Step 8200/100000; xent: 0.4495; lr: 0.0000164;   2 docs/s;  22555 sec
+[2020-08-14 05:30:27,427 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_305.pt, number of examples: 9993
+[2020-08-14 05:33:19,084 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_287.pt, number of examples: 9991
+[2020-08-14 05:33:40,687 INFO] Step 8300/100000; xent: 0.4502; lr: 0.0000166;   2 docs/s;  22775 sec
+[2020-08-14 05:36:10,908 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_262.pt, number of examples: 9988
+[2020-08-14 05:37:20,706 INFO] Step 8400/100000; xent: 0.4481; lr: 0.0000168;   2 docs/s;  22995 sec
+[2020-08-14 05:39:04,458 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_215.pt, number of examples: 9991
+[2020-08-14 05:41:00,658 INFO] Step 8500/100000; xent: 0.4527; lr: 0.0000170;   2 docs/s;  23215 sec
+[2020-08-14 05:41:00,661 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_8500.pt
+[2020-08-14 05:41:57,734 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_210.pt, number of examples: 9982
+[2020-08-14 05:44:41,907 INFO] Step 8600/100000; xent: 0.4435; lr: 0.0000172;   2 docs/s;  23436 sec
+[2020-08-14 05:44:49,620 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_198.pt, number of examples: 9992
+[2020-08-14 05:47:41,911 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_272.pt, number of examples: 9991
+[2020-08-14 05:48:23,197 INFO] Step 8700/100000; xent: 0.4467; lr: 0.0000174;   2 docs/s;  23658 sec
+[2020-08-14 05:50:33,680 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_24.pt, number of examples: 9989
+[2020-08-14 05:52:03,265 INFO] Step 8800/100000; xent: 0.4419; lr: 0.0000176;   2 docs/s;  23878 sec
+[2020-08-14 05:53:27,281 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_202.pt, number of examples: 9988
+[2020-08-14 05:55:43,306 INFO] Step 8900/100000; xent: 0.4466; lr: 0.0000178;   2 docs/s;  24098 sec
+[2020-08-14 05:56:19,511 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_153.pt, number of examples: 9989
+[2020-08-14 05:59:11,284 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_19.pt, number of examples: 9988
+[2020-08-14 05:59:24,038 INFO] Step 9000/100000; xent: 0.4388; lr: 0.0000180;   2 docs/s;  24319 sec
+[2020-08-14 05:59:24,040 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_9000.pt
+[2020-08-14 06:02:04,258 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_107.pt, number of examples: 9987
+[2020-08-14 06:03:05,241 INFO] Step 9100/100000; xent: 0.4481; lr: 0.0000182;   2 docs/s;  24540 sec
+[2020-08-14 06:04:57,745 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_88.pt, number of examples: 9993
+[2020-08-14 06:06:45,242 INFO] Step 9200/100000; xent: 0.4468; lr: 0.0000184;   2 docs/s;  24760 sec
+[2020-08-14 06:07:49,968 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_289.pt, number of examples: 9989
+[2020-08-14 06:10:25,394 INFO] Step 9300/100000; xent: 0.4531; lr: 0.0000186;   2 docs/s;  24980 sec
+[2020-08-14 06:10:41,901 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_301.pt, number of examples: 9987
+[2020-08-14 06:13:33,739 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_176.pt, number of examples: 9989
+[2020-08-14 06:14:06,180 INFO] Step 9400/100000; xent: 0.4464; lr: 0.0000188;   2 docs/s;  25201 sec
+[2020-08-14 06:16:27,308 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_127.pt, number of examples: 9989
+[2020-08-14 06:17:46,291 INFO] Step 9500/100000; xent: 0.4377; lr: 0.0000190;   2 docs/s;  25421 sec
+[2020-08-14 06:17:46,294 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_9500.pt
+[2020-08-14 06:19:20,641 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_249.pt, number of examples: 9991
+[2020-08-14 06:21:27,494 INFO] Step 9600/100000; xent: 0.4329; lr: 0.0000192;   2 docs/s;  25642 sec
+[2020-08-14 06:22:12,524 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_20.pt, number of examples: 9984
+[2020-08-14 06:25:04,374 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_93.pt, number of examples: 9993
+[2020-08-14 06:25:08,768 INFO] Step 9700/100000; xent: 0.4441; lr: 0.0000194;   2 docs/s;  25863 sec
+[2020-08-14 06:27:56,633 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_134.pt, number of examples: 9986
+[2020-08-14 06:28:48,901 INFO] Step 9800/100000; xent: 0.4426; lr: 0.0000196;   2 docs/s;  26083 sec
+[2020-08-14 06:30:50,195 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_250.pt, number of examples: 9989
+[2020-08-14 06:32:28,903 INFO] Step 9900/100000; xent: 0.4365; lr: 0.0000198;   2 docs/s;  26303 sec
+[2020-08-14 06:33:42,351 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_140.pt, number of examples: 9977
+[2020-08-14 06:36:08,891 INFO] Step 10000/100000; xent: 0.4422; lr: 0.0000200;   2 docs/s;  26523 sec
+[2020-08-14 06:36:08,894 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_10000.pt
+[2020-08-14 06:36:35,348 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_129.pt, number of examples: 9982
+[2020-08-14 06:39:27,472 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_333.pt, number of examples: 9986
+[2020-08-14 06:39:51,567 INFO] Step 10100/100000; xent: 0.4323; lr: 0.0000199;   2 docs/s;  26746 sec
+[2020-08-14 06:42:19,529 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_92.pt, number of examples: 9994
+[2020-08-14 06:43:31,452 INFO] Step 10200/100000; xent: 0.4398; lr: 0.0000198;   2 docs/s;  26966 sec
+[2020-08-14 06:45:11,230 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_213.pt, number of examples: 9987
+[2020-08-14 06:47:11,518 INFO] Step 10300/100000; xent: 0.4438; lr: 0.0000197;   2 docs/s;  27186 sec
+[2020-08-14 06:48:04,843 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_149.pt, number of examples: 9984
+[2020-08-14 06:50:51,496 INFO] Step 10400/100000; xent: 0.4514; lr: 0.0000196;   2 docs/s;  27406 sec
+[2020-08-14 06:50:57,025 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_108.pt, number of examples: 9987
+[2020-08-14 06:53:49,221 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_32.pt, number of examples: 9996
+[2020-08-14 06:54:32,650 INFO] Step 10500/100000; xent: 0.4384; lr: 0.0000195;   2 docs/s;  27627 sec
+[2020-08-14 06:54:32,652 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_10500.pt
+[2020-08-14 06:56:42,212 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_195.pt, number of examples: 9991
+[2020-08-14 06:58:14,046 INFO] Step 10600/100000; xent: 0.4319; lr: 0.0000194;   2 docs/s;  27849 sec
+[2020-08-14 06:59:34,128 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_200.pt, number of examples: 9988
+[2020-08-14 07:01:54,145 INFO] Step 10700/100000; xent: 0.4351; lr: 0.0000193;   2 docs/s;  28069 sec
+[2020-08-14 07:02:27,729 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_217.pt, number of examples: 9992
+[2020-08-14 07:05:20,272 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_69.pt, number of examples: 9990
+[2020-08-14 07:05:35,245 INFO] Step 10800/100000; xent: 0.4379; lr: 0.0000192;   2 docs/s;  28290 sec
+[2020-08-14 07:08:12,118 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_171.pt, number of examples: 9985
+[2020-08-14 07:09:15,348 INFO] Step 10900/100000; xent: 0.4392; lr: 0.0000192;   2 docs/s;  28510 sec
+[2020-08-14 07:11:03,980 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_2.pt, number of examples: 9988
+[2020-08-14 07:12:55,418 INFO] Step 11000/100000; xent: 0.4484; lr: 0.0000191;   2 docs/s;  28730 sec
+[2020-08-14 07:12:55,420 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_11000.pt
+[2020-08-14 07:13:58,653 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_186.pt, number of examples: 9995
+[2020-08-14 07:16:36,693 INFO] Step 11100/100000; xent: 0.4348; lr: 0.0000190;   2 docs/s;  28951 sec
+[2020-08-14 07:16:50,966 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_112.pt, number of examples: 9985
+[2020-08-14 07:19:42,869 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_322.pt, number of examples: 9984
+[2020-08-14 07:20:17,495 INFO] Step 11200/100000; xent: 0.4344; lr: 0.0000189;   2 docs/s;  29172 sec
+[2020-08-14 07:22:34,602 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_18.pt, number of examples: 9989
+[2020-08-14 07:23:57,970 INFO] Step 11300/100000; xent: 0.4388; lr: 0.0000188;   2 docs/s;  29393 sec
+[2020-08-14 07:25:26,852 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_99.pt, number of examples: 9994
+[2020-08-14 07:27:38,077 INFO] Step 11400/100000; xent: 0.4318; lr: 0.0000187;   2 docs/s;  29613 sec
+[2020-08-14 07:28:20,492 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_161.pt, number of examples: 9986
+[2020-08-14 07:31:12,782 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_136.pt, number of examples: 9991
+[2020-08-14 07:31:18,899 INFO] Step 11500/100000; xent: 0.4301; lr: 0.0000187;   2 docs/s;  29833 sec
+[2020-08-14 07:31:18,902 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_11500.pt
+[2020-08-14 07:34:05,772 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_173.pt, number of examples: 9990
+[2020-08-14 07:35:00,255 INFO] Step 11600/100000; xent: 0.4328; lr: 0.0000186;   2 docs/s;  30055 sec
+[2020-08-14 07:36:57,579 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_327.pt, number of examples: 9986
+[2020-08-14 07:38:40,323 INFO] Step 11700/100000; xent: 0.4306; lr: 0.0000185;   2 docs/s;  30275 sec
+[2020-08-14 07:39:51,132 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_78.pt, number of examples: 9992
+[2020-08-14 07:42:20,283 INFO] Step 11800/100000; xent: 0.4248; lr: 0.0000184;   2 docs/s;  30495 sec
+[2020-08-14 07:42:43,351 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_306.pt, number of examples: 9988
+[2020-08-14 07:45:35,153 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_142.pt, number of examples: 9989
+[2020-08-14 07:46:01,007 INFO] Step 11900/100000; xent: 0.4354; lr: 0.0000183;   2 docs/s;  30716 sec
+[2020-08-14 07:48:26,926 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_79.pt, number of examples: 9989
+[2020-08-14 07:49:41,086 INFO] Step 12000/100000; xent: 0.4320; lr: 0.0000183;   2 docs/s;  30936 sec
+[2020-08-14 07:49:41,088 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_12000.pt
+[2020-08-14 07:51:21,713 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_165.pt, number of examples: 9988
+[2020-08-14 07:53:22,332 INFO] Step 12100/100000; xent: 0.4269; lr: 0.0000182;   2 docs/s;  31157 sec
+[2020-08-14 07:54:13,821 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_261.pt, number of examples: 9991
+[2020-08-14 07:57:02,302 INFO] Step 12200/100000; xent: 0.4418; lr: 0.0000181;   2 docs/s;  31377 sec
+[2020-08-14 07:57:05,627 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_126.pt, number of examples: 9988
+[2020-08-14 07:59:57,376 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_3.pt, number of examples: 9989
+[2020-08-14 08:00:43,009 INFO] Step 12300/100000; xent: 0.4314; lr: 0.0000180;   2 docs/s;  31598 sec
+[2020-08-14 08:02:50,820 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_115.pt, number of examples: 9985
+[2020-08-14 08:04:22,943 INFO] Step 12400/100000; xent: 0.4324; lr: 0.0000180;   2 docs/s;  31818 sec
+[2020-08-14 08:05:43,018 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_95.pt, number of examples: 9994
+[2020-08-14 08:08:02,882 INFO] Step 12500/100000; xent: 0.4283; lr: 0.0000179;   2 docs/s;  32037 sec
+[2020-08-14 08:08:02,884 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_12500.pt
+[2020-08-14 08:08:35,956 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_67.pt, number of examples: 9983
+[2020-08-14 08:11:27,983 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_220.pt, number of examples: 9992
+[2020-08-14 08:11:45,528 INFO] Step 12600/100000; xent: 0.4364; lr: 0.0000178;   2 docs/s;  32260 sec
+[2020-08-14 08:14:20,327 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_155.pt, number of examples: 9983
+[2020-08-14 08:15:25,738 INFO] Step 12700/100000; xent: 0.4246; lr: 0.0000177;   2 docs/s;  32480 sec
+[2020-08-14 08:17:12,314 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_238.pt, number of examples: 9986
+[2020-08-14 08:19:06,623 INFO] Step 12800/100000; xent: 0.4205; lr: 0.0000177;   2 docs/s;  32701 sec
+[2020-08-14 08:20:06,536 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_255.pt, number of examples: 9988
+[2020-08-14 08:22:46,907 INFO] Step 12900/100000; xent: 0.4271; lr: 0.0000176;   2 docs/s;  32921 sec
+[2020-08-14 08:22:59,016 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_273.pt, number of examples: 9987
+[2020-08-14 08:25:50,233 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_343.pt, number of examples: 1227
+[2020-08-14 08:26:12,710 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_192.pt, number of examples: 9989
+[2020-08-14 08:26:27,755 INFO] Step 13000/100000; xent: 0.4232; lr: 0.0000175;   2 docs/s;  33142 sec
+[2020-08-14 08:26:27,758 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_13000.pt
+[2020-08-14 08:29:06,174 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_145.pt, number of examples: 9987
+[2020-08-14 08:30:09,405 INFO] Step 13100/100000; xent: 0.4248; lr: 0.0000175;   2 docs/s;  33364 sec
+[2020-08-14 08:31:58,458 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_328.pt, number of examples: 9986
+[2020-08-14 08:33:49,954 INFO] Step 13200/100000; xent: 0.4307; lr: 0.0000174;   2 docs/s;  33585 sec
+[2020-08-14 08:34:52,059 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_49.pt, number of examples: 9993
+[2020-08-14 08:37:30,166 INFO] Step 13300/100000; xent: 0.4293; lr: 0.0000173;   2 docs/s;  33805 sec
+[2020-08-14 08:37:44,476 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_12.pt, number of examples: 9986
+[2020-08-14 08:40:36,500 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_247.pt, number of examples: 9989
+[2020-08-14 08:41:11,138 INFO] Step 13400/100000; xent: 0.4291; lr: 0.0000173;   2 docs/s;  34026 sec
+[2020-08-14 08:43:28,425 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_225.pt, number of examples: 9983
+[2020-08-14 08:44:51,442 INFO] Step 13500/100000; xent: 0.4363; lr: 0.0000172;   2 docs/s;  34246 sec
+[2020-08-14 08:44:51,445 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_13500.pt
+[2020-08-14 08:46:22,135 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_181.pt, number of examples: 9986
+[2020-08-14 08:48:33,825 INFO] Step 13600/100000; xent: 0.4295; lr: 0.0000171;   2 docs/s;  34468 sec
+[2020-08-14 08:49:16,164 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_279.pt, number of examples: 9984
+[2020-08-14 08:52:08,481 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_21.pt, number of examples: 9985
+[2020-08-14 08:52:15,073 INFO] Step 13700/100000; xent: 0.4318; lr: 0.0000171;   2 docs/s;  34690 sec
+[2020-08-14 08:55:01,340 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_291.pt, number of examples: 9992
+[2020-08-14 08:55:55,655 INFO] Step 13800/100000; xent: 0.4268; lr: 0.0000170;   2 docs/s;  34910 sec
+[2020-08-14 08:57:53,132 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_117.pt, number of examples: 9985
+[2020-08-14 08:59:35,807 INFO] Step 13900/100000; xent: 0.4248; lr: 0.0000170;   2 docs/s;  35130 sec
+[2020-08-14 09:00:45,067 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_102.pt, number of examples: 9988
+[2020-08-14 09:03:15,907 INFO] Step 14000/100000; xent: 0.4272; lr: 0.0000169;   2 docs/s;  35350 sec
+[2020-08-14 09:03:15,910 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_14000.pt
+[2020-08-14 09:03:40,284 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_162.pt, number of examples: 9992
+[2020-08-14 09:06:32,713 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_167.pt, number of examples: 9983
+[2020-08-14 09:06:58,692 INFO] Step 14100/100000; xent: 0.4307; lr: 0.0000168;   2 docs/s;  35573 sec
+[2020-08-14 09:09:24,772 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_257.pt, number of examples: 9989
+[2020-08-14 09:10:39,407 INFO] Step 14200/100000; xent: 0.4183; lr: 0.0000168;   2 docs/s;  35794 sec
+[2020-08-14 09:12:27,492 INFO] Device ID 0
+[2020-08-14 09:12:27,492 INFO] Device cuda
+[2020-08-14 09:12:27,578 INFO] Loading checkpoint from /sdc/xli/py/coherence_bert/model_path/model_step_14000.pt
+[2020-08-14 09:12:29,392 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /sdc/xli/py/bert/models/bert_uncased/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517
+[2020-08-14 09:12:29,392 INFO] Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2020-08-14 09:12:30,143 INFO] loading weights file https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin from cache at /sdc/xli/py/bert/models/bert_uncased/f2ee78bdd635b758cc0a12352586868bef80e47401abe4c4fcc3832421e7338b.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157
+[2020-08-14 09:12:33,510 INFO] All model checkpoint weights were used when initializing BertModel.
+
+[2020-08-14 09:12:33,510 INFO] All the weights of BertModel were initialized from the model checkpoint at bert-base-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BertModel for predictions without further training.
+[2020-08-14 09:12:38,372 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /sdc/xli/py/bert/models/bert_uncased/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517
+[2020-08-14 09:12:38,373 INFO] Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2020-08-14 09:12:38,599 INFO] loading weights file https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin from cache at /sdc/xli/py/bert/models/bert_uncased/f2ee78bdd635b758cc0a12352586868bef80e47401abe4c4fcc3832421e7338b.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157
+[2020-08-14 09:12:42,039 INFO] NextSentencePrediction(
+  (bert): Bert(
+    (model): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (1): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (2): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (3): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (4): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (5): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (6): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (7): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (8): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (9): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (10): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (11): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+  )
+  (cls): BertOnlyNPSHead(
+    (seq_relationship): Linear(in_features=768, out_features=2, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+[2020-08-14 09:12:42,048 INFO] * number of parameters: 109483778
+[2020-08-14 09:12:42,048 INFO] Start training...
+[2020-08-14 09:12:42,645 INFO] All model checkpoint weights were used when initializing BertModel.
+
+[2020-08-14 09:12:42,645 INFO] All the weights of BertModel were initialized from the model checkpoint at bert-base-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BertModel for predictions without further training.
+[2020-08-14 09:12:43,505 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_139.pt, number of examples: 9990
+[2020-08-14 09:14:23,570 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_259.pt, number of examples: 9992
+[2020-08-14 09:15:48,287 INFO] Step 14100/100000; xent: 0.4281; lr: 0.0000168;   3 docs/s;    185 sec
+[2020-08-14 09:15:56,713 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_270.pt, number of examples: 9989
+[2020-08-14 09:17:30,004 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_90.pt, number of examples: 9989
+[2020-08-14 09:18:47,579 INFO] Step 14200/100000; xent: 0.4247; lr: 0.0000168;   3 docs/s;    364 sec
+[2020-08-14 09:19:03,334 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_174.pt, number of examples: 9988
+[2020-08-14 09:20:39,437 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_36.pt, number of examples: 9989
+[2020-08-14 09:21:48,182 INFO] Step 14300/100000; xent: 0.4220; lr: 0.0000167;   3 docs/s;    545 sec
+[2020-08-14 09:22:12,445 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_204.pt, number of examples: 9986
+[2020-08-14 09:23:46,453 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_337.pt, number of examples: 9986
+[2020-08-14 09:24:48,750 INFO] Step 14400/100000; xent: 0.4226; lr: 0.0000167;   3 docs/s;    725 sec
+[2020-08-14 09:25:20,041 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_307.pt, number of examples: 9991
+[2020-08-14 09:27:08,557 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_208.pt, number of examples: 9988
+[2020-08-14 09:28:50,213 INFO] Step 14500/100000; xent: 0.4209; lr: 0.0000166;   2 docs/s;    967 sec
+[2020-08-14 09:28:50,218 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_14500.pt
+[2020-08-14 09:30:03,447 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_235.pt, number of examples: 9993
+[2020-08-14 09:33:10,629 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_124.pt, number of examples: 9983
+[2020-08-14 09:34:43,363 INFO] Step 14600/100000; xent: 0.4243; lr: 0.0000166;   2 docs/s;   1320 sec
+[2020-08-14 09:36:18,596 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_55.pt, number of examples: 9993
+[2020-08-14 09:39:12,165 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_91.pt, number of examples: 9985
+[2020-08-14 09:40:22,370 INFO] Step 14700/100000; xent: 0.4256; lr: 0.0000165;   2 docs/s;   1659 sec
+[2020-08-14 09:41:55,036 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_283.pt, number of examples: 9986
+[2020-08-14 09:44:38,869 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_207.pt, number of examples: 9987
+[2020-08-14 09:45:24,965 INFO] Step 14800/100000; xent: 0.4215; lr: 0.0000164;   2 docs/s;   1961 sec
+[2020-08-14 09:46:52,965 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_81.pt, number of examples: 9990
+[2020-08-14 09:48:59,693 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_61.pt, number of examples: 9984
+[2020-08-14 09:49:34,185 INFO] Step 14900/100000; xent: 0.4135; lr: 0.0000164;   2 docs/s;   2211 sec
+[2020-08-14 09:51:10,751 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_304.pt, number of examples: 9991
+[2020-08-14 09:53:42,985 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_14.pt, number of examples: 9988
+[2020-08-14 09:54:10,004 INFO] Step 15000/100000; xent: 0.4246; lr: 0.0000163;   2 docs/s;   2486 sec
+[2020-08-14 09:54:10,006 INFO] Saving checkpoing /sdc/xli/py/coherence_bert/model_path/model_step_15000.pt
+[2020-08-14 09:56:29,569 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_37.pt, number of examples: 9991
+[2020-08-14 09:59:12,377 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_282.pt, number of examples: 9996
+[2020-08-14 09:59:27,701 INFO] Step 15100/100000; xent: 0.4221; lr: 0.0000163;   2 docs/s;   2804 sec
+[2020-08-14 10:02:05,441 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_166.pt, number of examples: 9988
+[2020-08-14 10:05:01,159 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_4.pt, number of examples: 9988
+[2020-08-14 10:05:04,781 INFO] Step 15200/100000; xent: 0.4174; lr: 0.0000162;   2 docs/s;   3141 sec
+[2020-08-14 10:07:55,956 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_312.pt, number of examples: 9988
+[2020-08-14 10:10:39,115 INFO] Step 15300/100000; xent: 0.4188; lr: 0.0000162;   2 docs/s;   3476 sec
+[2020-08-14 10:10:54,972 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_214.pt, number of examples: 9987
+[2020-08-14 10:13:51,648 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_206.pt, number of examples: 9985
+[2020-08-14 10:16:17,969 INFO] Step 15400/100000; xent: 0.4113; lr: 0.0000161;   2 docs/s;   3814 sec
+[2020-08-14 10:16:46,194 INFO] Loading train dataset from /sdc/xli/Datasets/cnn_daily/data_nsp/shard/pts/train/cd_train_338.pt, number of examples: 9990
